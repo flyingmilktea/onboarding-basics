@@ -1,3 +1,10 @@
+Welcome. Your first goal is to log into specified machine.
+
+- [Logging into Development Environment](#logging-into-development-environment)
+  - [Using command-line](#using-command-line)
+  - [Using SSH config file](#using-ssh-config-file)
+  - [Using VSCode remote-ssh plugin](#using-vscode-remote-ssh-plugin)
+
 # Logging into Development Environment
 
 You will be given
@@ -5,11 +12,6 @@ You will be given
 - A username, e.g. `YOUR_USER_NAME`
 - A `.pem` ssh-key, e.g. `fcai-YOUR_USER_NAME.pem`
 - A hostname, e.g. `192.168.50.204`
-
-Your goal is to log into specified machine
-1. using command-line
-2. using SSH config file
-3. using VSCode remote-ssh plugin
 
 ## Using command-line
 
