@@ -76,26 +76,26 @@ Remote-ssh plugin allows you to work at remote machine as if it is local, it han
 
 We assume you to already have VSCode installed.
 
-### Install remote-ssh plugin
+1. Install remote-ssh plugin
 
-1. search for this plugin name `ms-vscode-remote.remote-ssh`
+    search for this plugin name `ms-vscode-remote.remote-ssh`, press `install`
 
     ![image](https://user-images.githubusercontent.com/20808792/169720542-91b4c11a-7110-4c81-b89a-23ac6ae5ce74.png)
 
-2. Press install
+2. Connect to remote using remote-ssh plugin
 
-### Attempt to connect to remote
+    As you have already set ssh-config, login is simple
 
-As you have already set ssh-config, login is simple
-
-1. Press `ctrl+shift+P` and type `SSH`
+    - Press `ctrl+shift+P` and type `SSH`
 
     ![image](https://user-images.githubusercontent.com/20808792/169720752-ab955e77-3e36-4ae6-aded-4db099e8dcc4.png)
 
-2. click `Remote-SSH: Connect to Host...` and type `fcai4`
+    - click `Remote-SSH: Connect to Host...` and type `fcai4`
 
     ![image](https://user-images.githubusercontent.com/20808792/169720789-da5d88fb-208d-47fc-94b8-fff946a01432.png)
 
-A new VSCode window should open, and you should check that in this window
-- VSCode open file `ctrl+k ctrl+o` is showing files at remote, not your local machine
-- VSCode terminal `` ctrl+` `` at the remote machine
+    A new VSCode window should open.
+    
+    You should check that in this window
+    - VSCode open file `ctrl+k ctrl+o` is showing files at remote, not your local machine
+    - VSCode terminal `` ctrl+` `` at the remote machine
