@@ -92,7 +92,7 @@ We assume you to already have VSCode installed.
 
     - click `Remote-SSH: Connect to Host...` and type `fcai4`
 
-    ![image](https://user-images.githubusercontent.com/20808792/169720789-da5d88fb-208d-47fc-94b8-fff946a01432.png)
+    ![image](https://user-images.githubusercontent.com/20808792/169721202-f8ebc587-3c66-4ab2-ac74-80ccf6329c28.png)
 
     A new VSCode window should open.
     
