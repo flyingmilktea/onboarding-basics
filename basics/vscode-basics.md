@@ -20,9 +20,62 @@ VSCode has GUI and has a low learning curve to start with, it can be used on Lin
 
 If you have not chosen a supported IDE (either VSCode or vim), we recommend VSCode for beginners. 
 
+# Tabs
+
+In general, we recommend you to open one VSCode window per repository
+
+```bash
+git clone git@github.com:flyingmilktea/onboarding-basics.git
+
+code onboarding-basics
+```
+
+__Explorer__
+
+Here you will find all files in this repository, and click to edit each one
+
+![image](https://user-images.githubusercontent.com/20808792/169729246-8f08c032-925e-45cf-9e1f-ab8bc314331d.png)
+
+__Search__
+
+To search for keywords in the whole repository, and click to edit the location
+
+![image](https://user-images.githubusercontent.com/20808792/169729338-bf7b0128-edf0-4215-b20a-a59df17d1fc1.png)
+
+__Source Control__
+
+To track your staged / local changes, allows you to open a file to pick specific lines to stage
+
+![image](https://user-images.githubusercontent.com/20808792/169729617-c3368dbf-51bf-4753-bac6-35cab20becda.png)
+
+Another feature is from git-lens plugin that show commit history
+
+![image](https://user-images.githubusercontent.com/20808792/169729721-1931bb3a-95a6-4685-b72d-ba058d7ae5e9.png)
+
+__Terminal__
+
+To run commands during development, command-line tools are necessary for development, e.g. from `npm`, `pip`, `git` or other tools
+
+![Screenshot from 2022-05-23 09-55-05](https://user-images.githubusercontent.com/20808792/169729863-3866256a-818f-40dd-b4ce-da798357045c.png)
+
+
 # Configs
 
+These configs can be set using UI or JSON
 
+`ctrl+shift+P` > `Preferences: Open Settings (UI)`
+
+__Recommended__
+
+`"terminal.integrated.scrollback": 100000`: increase your scrollback buffer large enough to see some error message, default of 1000 is grossly not enough.
+
+`"editor.formatOnSave": true`: format your code on save, saves typing a few spaces and ensures formatting is correct. This feature calls the formatter of your choice, you have to install and config the formatter properly for this feature to work.
+
+`"diffEditor.ignoreTrimWhitespace": false`: python formatting is based on whitespace, presence or not make a difference.
+
+`"terminal.integrated.allowChords": false`: if you will use `nano` editor on terminal sometimes. 
+
+Disable `ctrl+w` to close VSCode completely if it does: different version of VSCode seem to have different behavior, see https://github.com/microsoft/vscode/issues/54492 . Especially you are doing at remote, closing VSCode means also disconnect from the terminal and lose all remote apps that you have open, and environment variables you have set, just re-opening VSCode doesn't get you back those states at remote.
 
 # Extensions
 
