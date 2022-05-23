@@ -6,13 +6,11 @@ You might already know these, or in case not, it is a good time to catch up, ple
 This is written in a cheat-sheet like format without detailed description for quick look-up
 
 - [Why VSCode](#why-vscode)
-  - [Hotkeys](#hotkeys)
-    - [Editing](#editing)
-    - [Terminal](#terminal)
-  - [Configs](#configs)
-  - [Extensions](#extensions)
-    - [General](#general)
-    - [Language Specific](#language-specific)
+- [Tabs](#tabs)
+- [Configs](#configs)
+- [Extensions](#extensions)
+- [Hotkeys](#hotkeys)
+- [Contribution](#contribution)
 
 # Why VSCode
 
