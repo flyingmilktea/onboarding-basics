@@ -3,7 +3,7 @@ We support VSCode as one of our IDE for most development work.
 Here are some basics and recommendation that can add some help to your development, or save you a few clicks.
 You might already know these, or in case not, it is a good time to catch up, please walk-through them one by one if you have not.
 
-This is written in a cheat-sheet like format without detailed description for quick look-up
+This is written in a cheat-sheet like format without detailed description for quick look-up.
 
 - [Why VSCode](#why-vscode)
 - [Tabs](#tabs)
@@ -73,7 +73,8 @@ __Recommended__
 
 `"terminal.integrated.allowChords": false`: if you will use `nano` editor on terminal sometimes. 
 
-Disable `ctrl+w` to close VSCode completely if it does: different version of VSCode seem to have different behavior, see https://github.com/microsoft/vscode/issues/54492 . Especially you are doing at remote, closing VSCode means also disconnect from the terminal and lose all remote apps that you have open, and environment variables you have set, just re-opening VSCode doesn't get you back those states at remote.
+Disable `ctrl+w` to close VSCode completely if it does: different version of VSCode seem to have different behavior, see [microsoft/vscode#54492](https://github.com/microsoft/vscode/issues/54492).
+Especially you are doing at remote, closing VSCode means also disconnect from the terminal and lose all remote apps that you have open, and environment variables you have set, just re-opening VSCode doesn't get you back those states at remote.
 
 # Extensions
 
