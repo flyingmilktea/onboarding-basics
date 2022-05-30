@@ -7,3 +7,4 @@ __Basics__
 
 - [Login](/basics/ssh-login.md)
 - [VSCode](/basics/vscode.md)
+- [SSH](/basics/git-config.md)
