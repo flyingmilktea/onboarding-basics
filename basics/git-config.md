@@ -11,7 +11,9 @@ cd .ssh
 cat id_rsa.pub
 ```
 Then you will see a long string starting with ```ssh-rsa``` and end with ```= <your-user-name>@<node>```. Copy the string and goto **github>Settings>SSH and GPG keys** Then you will see a green button **New SSH key** at the top right corner. Click it and fill the copied string to Key field. The title field can be anything, but we suggest you to use **fcai** as title. After filled both field, click Add SSH key.  
-![image](./SSH.png)
+
+<img src="./SSH.png" width="600"/>  
+
 Then you can run
 ```
 ssh -T git@github.com
@@ -41,8 +43,10 @@ cd Documents
 mkdir Git
 cd Git
 ```
-Then copy the ssh link from this repo
-![image](./gitpage.png)
+Then copy the ssh link from this repo  
+ 
+<img src="./gitpage.png" width="600"/>  
+ 
 which is ```git@github.com:flyingmilktea/onboarding-basics.git```  
 Then back to linux server run
 ```
