@@ -10,7 +10,7 @@ cd .ssh
 ```
 cat id_rsa.pub
 ```
-Then you will see a long string starting with ```ssh-rsa``` and end with ```= <your-user-name>@<node>```. Copy the string and goto **github>Settings>SSH and GPG keys** Then you will see a green button **New SSH key** at the top right corner. Click it and fill the copied string to Key field. The title field can be anything, but we suggest you to use **fcai** as title. After filled both field, click Add SSH key.  
+Then you will see a long string starting with ```ssh-rsa``` and end with ```= <something>@<node>```. Copy the string and go to **github>Settings>SSH and GPG keys** Then you will see a green button **New SSH key** at the top right corner. Click it and fill the copied string to Key field. The title field can be anything, but we suggest you to use **fcai** as title. After filled both field, click Add SSH key.  
 
 <img src="./SSH.png" width="600"/>  
 
@@ -25,12 +25,6 @@ If you see this message, it means the SSH key is successfully setup. Instead, if
 >Permission denied (public key).  
 
 That's mean it is unccessful, you may try to run through the step again or ask for help.
-
-If successfully setup SSH key, run
-```
-eval $(sh-agent -s)
-ssh-add ~/.ssh_/id_rsa
-```
  
 # Clone via SSH
 Once you setup SSH key, you can try to clone to local repo. On the linux server run
@@ -57,10 +51,10 @@ Now, you should successfully clone the repo to local.
 # Push to remote repo
 After cloning to local, run
 ```
-git checkout <new-branch name>
+git checkout -b <new-branch-name>
 ```
 then
 ```
-git push -u origin <branch-name>
+git push origin <new-branch-name>
 ```
 Then you should successfully push to the remote repo. If unsuccessful, you may ask for help.
