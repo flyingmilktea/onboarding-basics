@@ -1,0 +1,33 @@
+jobs:
+  superlint:
+    name: Super-linter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          eval "$(ssh-agent -s)"
+          ssh-add - <<< '${{ secrets.PRIVATE_SSH_KEY }}'
+          make
+      - env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LINTER_RULES_PATH: /
+          LOG_LEVEL: WARN
+          VALIDATE_ALL_CODEBASE: true
+          VALIDATE_GITHUB_ACTIONS: true
+          VALIDATE_GITLEAKS: true
+          VALIDATE_MARKDOWN: true
+          VALIDATE_YAML: true
+        name: Lint Code Base
+        uses: github/super-linter/slim@v4
+name: Linters
+'on':
+  pull_request:
+    branches:
+      - main
+      - dev
+  push:
+    branches:
+      - main
+      - dev
