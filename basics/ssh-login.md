@@ -1,10 +1,11 @@
 # Logging into Development Environment
 
-Welcome. Your first goal is to log into specified machine.
-
+__Table of Contents__
 - [Logging into Development Environment](#logging-into-development-environment)
-  - [Using command-line](#using-command-line)
-  - [Using SSH config file](#using-ssh-config-file)
+  - [A. Using command-line](#a-using-command-line)
+  - [B. Using SSH config file](#b-using-ssh-config-file)
+
+Welcome. Your first goal is to log into specified machine.
 
 You will be given
 
@@ -12,7 +13,7 @@ You will be given
 - A `.pem` ssh-key, e.g. `fcai-YOUR_USER_NAME.pem`
 - A hostname, e.g. `192.168.50.204`
 
-## Using command-line
+## A. Using command-line
 
 You are going to make your first manual attempt to connect, if anything is not working, please talk to us.
 
@@ -49,7 +50,7 @@ You are going to make your first manual attempt to connect, if anything is not w
     #> [YOUR_USER_NAME@node4 ~]$ 
     ```
 
-## Using SSH config file
+## B. Using SSH config file
 
 You can create an alias for this set of ssh login configuration using ssh config file
 
