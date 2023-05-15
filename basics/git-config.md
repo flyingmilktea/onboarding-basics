@@ -1,60 +1,65 @@
-After connect to our server. You may try to clone a repo (says, this one) to the server via SSH.
+# Using Github without password
 
-# SSH key
-First you have to setup ssh key on github so you are able to push to remote repo after clone.
+In this tutorial, you will learn how to clone a repository from GitHub to a Linux server using SSH, set up an SSH key on GitHub so that you can push changes to the remote repository, and push changes from the local to the remote repository.
 
-On the linux server,   
-```
-cd .ssh
-```
-```
-cat id_rsa.pub
-```
-Then you will see a long string starting with ```ssh-rsa``` and end with ```= <something>@<node>```. Copy the string and go to **github>Settings>SSH and GPG keys** Then you will see a green button **New SSH key** at the top right corner. Click it and fill the copied string to Key field. The title field can be anything, but we suggest you to use **fcai** as title. After filled both field, click Add SSH key.  
+## A. Setting up the SSH Key
 
-<img src="./SSH.png" width="600"/>  
+Before you can clone the repository, you need to set up an SSH key on your GitHub account.
 
-Then you can run
-```
-ssh -T git@github.com
-```
-Then type ```yes```. Then you should see
->  Hi <your Github username>! You've successfully authenticated, but Github does not provide shell access.  
+1. On the Linux server, navigate to the `.ssh` directory by running the command `cd ~/.ssh`
 
-If you see this message, it means the SSH key is successfully setup. Instead, if you see
->Permission denied (public key).  
+2. Once in the `.ssh` directory, run `cat id_rsa.pub` to display your SSH key. The key should start with `ssh-rsa` and end with `=<your_email_address>`. 
 
-That's mean it is unccessful, you may try to run through the step again or ask for help.
- 
-# Clone via SSH
-Once you setup SSH key, you can try to clone to local repo. On the linux server run
-```
-cd ~
-```
-then you may choose a diretory you like to clone the repo. But in this tutorial, we will put it into Documents. Therefore run
-```
-cd Documents
-mkdir Git
-cd Git
-```
-Then copy the ssh link from this repo  
- 
-<img src="./gitpage.png" width="600"/>  
- 
-which is ```git@github.com:flyingmilktea/onboarding-basics.git```  
-Then back to linux server run
-```
-git clone git@github.com:flyingmilktea/onboarding-basics.git
-```
-Now, you should successfully clone the repo to local.
+3. Copy the entire public key string.
 
-# Push to remote repo
-After cloning to local, run
+4. Log in to your GitHub account, go to **Settings > SSH and GPG keys**, and click on the green button labeled **New SSH key** in the upper-right corner. 
+
+<img src="./img/ssh-add-key.png" width="600"/>
+
+5. In the **Key** section, paste the SSH key that you copied earlier.
+
+6. Give the key a title, such as **fcai**.
+
+7. Click the **Add SSH key** button.
+
+8. To test your SSH key, run `ssh -T git@github.com` on the Linux server. Type `yes` if prompted, and you should see the message
+   
+```bash
+# Hi <your Github username>! You've successfully authenticated, but GitHub does not provide shell access." 
 ```
-git checkout -b <new-branch-name>
-```
-then
-```
-git push origin <new-branch-name>
-```
-Then you should successfully push to the remote repo. If unsuccessful, you may ask for help.
+
+## B. Cloning the Repository via SSH
+
+Once you have set up your SSH key, you can clone the repository to your local machine.
+
+1. On the Linux server, navigate to the directory where you want to clone the repository. For example, you can run `cd ~/Documents` to navigate to your Documents directory.
+
+2. Copy the SSH link for the repository that you want to clone. You can find this link by going to your repository on GitHub, clicking the **Code** button, and selecting the SSH option.
+
+<img src="./img/git-page.png" width="600"/>
+
+3. To clone the repository, run the following command: `git clone <repo-ssh-path>`.
+
+4. If the repository has been cloned successfully, you'll see a new directory with the name of your repository.
+
+## C. Pushing Changes to the Remote Repository
+
+After cloning the repository, you can make changes to the files and push them to the remote repository.
+
+1. On the Linux server, navigate to the repository directory by running `cd ~/Documents/<your_repository>`.
+
+2. Create a new branch by running `git checkout -b <new-branch-name>`.
+
+3. Make any changes to the files in the repository.
+
+4. Add the changes to the local Git repository by running `git add .`.
+
+5. Commit the changes by running `git commit -m "<commit message>"`.
+
+6. Push the changes to the remote repository by running `git push origin -u <new-branch-name>`.
+
+7. If the push was successful, you can go to the remote GitHub repository and see the changes you've made.
+
+Congratulations! You have successfully learned how to clone repositories, set up SSH keys, and push changes to remote repositories using GitHub on a Linux machine.
+
+If you are unsuccessful in any above steps, please ask for help.
