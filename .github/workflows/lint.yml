@@ -20,7 +20,7 @@ jobs:
           VALIDATE_MARKDOWN: true
           VALIDATE_YAML: true
         name: Lint Code Base
-        uses: github/super-linter/slim@v4
+        uses: github/super-linter/slim@latest
 name: Linters
 'on':
   pull_request:

@@ -1,0 +1,28 @@
+#!/bin/bash
+
+export LC_ALL=C
+
+git submodule deinit --all -f
+docker run --rm \
+    -e EXPERIMENTAL_BATCH_WORKER=true \
+    -e IGNORE_GITIGNORED_FILES=true \
+    -e JAVASCRIPT_DEFAULT_STYLE=prettier \
+    -e LINTER_RULES_PATH=/ \
+    -e LOG_LEVEL=NOTICE \
+    -e RUN_LOCAL=true \
+    -e USE_FIND_ALGORITHM=true \
+    -e VALIDATE_BASH=true \
+    -e VALIDATE_CLOUDFORMATION=true \
+    -e VALIDATE_DOCKERFILE_HADOLINT=true \
+    -e VALIDATE_GITHUB_ACTIONS=true \
+    -e VALIDATE_GITLEAKS=true \
+    -e VALIDATE_JAVASCRIPT_ES=true \
+    -e VALIDATE_JSON=true \
+    -e VALIDATE_JSX=true \
+    -e VALIDATE_MARKDOWN=true \
+    -e VALIDATE_PYTHON=true \
+    -e VALIDATE_PYTHON_BLACK=true \
+    -e VALIDATE_PYTHON_ISORT=true \
+    -e VALIDATE_PYTHON_PYLINT=true \
+    -w /tmp/lint \
+    -v "$(git rev-parse --show-toplevel)":/tmp/lint github/super-linter:slim-latest
