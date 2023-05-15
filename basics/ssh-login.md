@@ -1,11 +1,10 @@
+# Logging into Development Environment
+
 Welcome. Your first goal is to log into specified machine.
 
 - [Logging into Development Environment](#logging-into-development-environment)
   - [Using command-line](#using-command-line)
   - [Using SSH config file](#using-ssh-config-file)
-  - [Using VSCode remote-ssh plugin](#using-vscode-remote-ssh-plugin)
-
-# Logging into Development Environment
 
 You will be given
 
@@ -35,7 +34,7 @@ You are going to make your first manual attempt to connect, if anything is not w
     ```
 
 3. Attempt to login using command line
-   
+
     ```bash
     ssh -i ~/.ssh/fcai-YOUR_USER_NAME.pem YOUR_USER_NAME@192.168.50.204
 
@@ -54,9 +53,9 @@ You are going to make your first manual attempt to connect, if anything is not w
 
 You can create an alias for this set of ssh login configuration using ssh config file
 
-1. Edit your ~/.ssh/config
+1. Edit your `~/.ssh/config`
 
-    ```
+    ```text
     Host fcai4
         HostName 192.168.50.204
         IdentityFile ~/.ssh/fcai-YOUR_USER_NAME.pem
@@ -71,33 +70,3 @@ You can create an alias for this set of ssh login configuration using ssh config
     #> Last login: Mon May 23 06:55:19 2022 from 192.168.xxx.xxx
     #> [YOUR_USER_NAME@node4 ~]$ 
     ```
-
-## Using VSCode remote-ssh plugin
-
-Remote-ssh plugin allows you to work at remote machine as if it is local, it handles most operations e.g. file, terminal, port forwarding automatically.
-
-We assume you to already have VSCode installed.
-
-1. Install remote-ssh plugin
-
-    search for this plugin name `ms-vscode-remote.remote-ssh`, press `install`
-
-    ![image](https://user-images.githubusercontent.com/20808792/169720542-91b4c11a-7110-4c81-b89a-23ac6ae5ce74.png)
-
-2. Connect to remote using remote-ssh plugin
-
-    As you have already set ssh-config, login is simple
-
-    - Press `ctrl+shift+P` and type `SSH`
-
-    ![image](https://user-images.githubusercontent.com/20808792/169720752-ab955e77-3e36-4ae6-aded-4db099e8dcc4.png)
-
-    - click `Remote-SSH: Connect to Host...` and type `fcai4`
-
-    ![image](https://user-images.githubusercontent.com/20808792/169721202-f8ebc587-3c66-4ab2-ac74-80ccf6329c28.png)
-
-    A new VSCode window should open.
-    
-    You should check that in this window
-    - VSCode open file `ctrl+k ctrl+o` is showing files at remote, not your local machine
-    - VSCode terminal `` ctrl+` `` at the remote machine

@@ -8,6 +8,7 @@ This is written in a cheat-sheet like format without detailed description for qu
 - [Why VSCode](#why-vscode)
 - [Tabs](#tabs)
 - [Configs](#configs)
+  - [Using VSCode remote-ssh plugin](#using-vscode-remote-ssh-plugin)
 - [Extensions](#extensions)
 - [Hotkeys](#hotkeys)
 - [Contribution](#contribution)
@@ -58,6 +59,36 @@ To run commands during development, command-line tools are necessary for develop
 
 
 # Configs
+
+## Using VSCode remote-ssh plugin
+
+Remote-ssh plugin allows you to work at remote machine as if it is local, it handles most operations e.g. file, terminal, port forwarding automatically.
+
+We assume you to already have VSCode installed.
+
+1. Install remote-ssh plugin
+
+    search for this plugin name `ms-vscode-remote.remote-ssh`, press `install`
+
+    ![image](https://user-images.githubusercontent.com/20808792/169720542-91b4c11a-7110-4c81-b89a-23ac6ae5ce74.png)
+
+2. Connect to remote using remote-ssh plugin
+
+    As you have already set ssh-config, login is simple
+
+    - Press `ctrl+shift+P` and type `SSH`
+
+    ![image](https://user-images.githubusercontent.com/20808792/169720752-ab955e77-3e36-4ae6-aded-4db099e8dcc4.png)
+
+    - click `Remote-SSH: Connect to Host...` and type `fcai4`
+
+    ![image](https://user-images.githubusercontent.com/20808792/169721202-f8ebc587-3c66-4ab2-ac74-80ccf6329c28.png)
+
+    A new VSCode window should open.
+
+    You should check that in this window
+    - VSCode open file `ctrl+k ctrl+o` is showing files at remote, not your local machine
+    - VSCode terminal `` ctrl+` `` at the remote machine
 
 These configs can be set using UI or JSON
 
