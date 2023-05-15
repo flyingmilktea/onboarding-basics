@@ -21,6 +21,6 @@ __Basics__
 
 - [ssh](/basics/ssh-login.md)
 - [docker](/basics/docker.md)
-- [git](/basics/git-config.md)
+- [git](/basics/git-config/index.md)
 - [vscode](/basics/vscode.md)
 - [awscli/aws-sam-cli](/basics/aws.md)
